@@ -1,0 +1,39 @@
+<header>
+  <nav class="menu-container">
+    <ul>
+      About me
+    </ul>
+    <ul>
+      Skills
+    </ul>
+    <ul>
+      Projects
+    </ul>
+    <ul>
+      Contact
+    </ul>
+  </nav>
+  <div class="bar-container">
+    <div class="bar" (click)="openMenu()">
+      <div [ngClass]="!isMobileMenu ? 'bar1' : 'change bar1'"></div>
+      <div [ngClass]="!isMobileMenu ? 'bar2' : 'change bar2'"></div>
+      <div [ngClass]="!isMobileMenu ? 'bar3' : 'change bar3'"></div>
+    </div>
+    <aside class="no-slide" [ngClass]="isMobileMenu ? 'slide' : ''">
+      <nav class="mobile-nav">
+        <ul>
+          About me
+        </ul>
+        <ul>
+          Skills
+        </ul>
+        <ul>
+          Projects
+        </ul>
+        <ul>
+          Contact
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</header>

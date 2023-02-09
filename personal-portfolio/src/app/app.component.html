@@ -1,0 +1,5 @@
+<app-header (blurMain)="blurMainComponent()"></app-header>
+<div [ngClass]="blurBackground ? 'blurMain' : 'noBlur'">
+  <app-main></app-main>
+</div>
+<app-footer></app-footer>

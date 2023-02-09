@@ -1,0 +1,39 @@
+<main class="container">
+  <div class="my-picture">
+    <img src="assets/abi.jpeg" alt="abi-image" />
+  </div>
+  <div class="about-info">
+    <p>
+      Hello! 👋 I am <span class="name">Abinaya</span>, a Front end developer,
+      passionate about bringing ideas into light. I specialize in writing clean,
+      minimal, optimal code and design
+    </p>
+    <button mat-stroked-button color="primary" class="btn-hire-me">
+      Resume
+    </button>
+  </div>
+  <section class="about-me">
+    <h4>About me</h4>
+    <p>
+      I have 6+ years of professional experience, worked on more than 6
+      professional live projects. I specialize in Banking, healthcare and
+      Insurance domains. Built responsive, clean and optimal code in a fast pace
+      environment using various development tools. Involved in all aspects of a
+      SDLC activities in an agile environment.
+    </p>
+    <div class="career-block">
+      <div class="career-info" *ngFor="let category of categories">
+        <span>{{ category.number }}</span>
+        <span>{{ category.name }}</span>
+      </div>
+    </div>
+  </section>
+  <section class="skills">
+    <h4>Skills</h4>
+    <ul *ngFor="let name of skills">
+      {{
+        name
+      }}
+    </ul>
+  </section>
+</main>
