@@ -1,7 +1,7 @@
 <main class="container">
-  <div class="my-picture">
+  <!-- <div class="my-picture">
     <img src="assets/abi.jpeg" alt="abi-image" />
-  </div>
+  </div> -->
   <div class="about-info">
     <p>
       Hello! 👋 I am <span class="name">Abinaya</span>, a Front end developer,
@@ -28,12 +28,15 @@
       </div>
     </div>
   </section>
+  <h4 class="skills-text">Skills</h4>
   <section class="skills">
-    <h4>Skills</h4>
-    <ul *ngFor="let name of skills">
-      {{
-        name
-      }}
-    </ul>
+    <div
+      class="skills-list"
+      *ngFor="let image of images"
+      style="transition-delay: 300ms"
+    >
+      <img src="{{ image.imageUrl }}" alt="" />
+      <p>{{ image.imageName }}</p>
+    </div>
   </section>
 </main>

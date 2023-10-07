@@ -1,0 +1,40 @@
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  border-top: 1px solid beige;
+  font-size: 1.5rem;
+  .links-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .links-container .social-media-links {
+    img {
+      width: 5vw;
+      height: 5vw;
+      :hover {
+        color: aliceblue;
+        background: antiquewhite;
+        cursor: pointer;
+      }
+    }
+  }
+}
+footer {
+  background-color: beige;
+  padding: 2.5rem;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0;
+  position: relative;
+  top: 2rem;
+  color: gray;
+}

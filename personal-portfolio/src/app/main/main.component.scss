@@ -5,8 +5,13 @@
   justify-content: center;
 }
 .about-me {
-  color: azure;
-  margin-top: 110px;
+  // color: azure;
+  // margin-top: 110px;
+  font-size: 1.5rem;
+  margin-top: 170px;
+  font-family: sans-serif;
+  color: dimgrey;
+  line-height: 1.1;
 }
 
 .my-picture {
@@ -30,16 +35,25 @@ img {
   flex-direction: column;
   position: relative;
   top: 120px;
-  font-size: 4.2vw;
+  font-size: 2rem;
   line-height: 1.5;
   .name {
     font-size: 30px;
-    font-family: monospace;
     color: cornflowerblue;
   }
 }
+
+.career-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .career-info:after {
+    border-left: 1.5px solid cyan;
+  }
+}
 .btn-hire-me {
-  font-size: 3.4vw;
+  font-size: 2rem;
+  padding: 1rem;
   width: 24%;
   border-color: blueviolet;
   cursor: pointer;
@@ -48,11 +62,44 @@ img {
   }
 }
 .skills {
-  color: beige;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+
+  .skills-list {
+    border: 1px solid dimgrey;
+    border-radius: 13px;
+    padding: 0.5rem;
+    background-color: azure;
+    text-align: center;
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  img {
+    width: 5vw;
+    height: 5vw;
+  }
+  p {
+    color: black;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+h4 {
+  font-size: 2rem;
+  color: magenta;
+  font-family: math;
+}
+.skills-text {
+  margin-top: 3rem;
 }
 
 @media (max-width: 800px) {
@@ -62,28 +109,69 @@ img {
     padding: 0 25px;
     align-items: center;
     flex-wrap: wrap-reverse;
+    .about-info {
+      font-size: 4.2vw;
+    }
+
+    .btn-hire-me {
+      font-size: 3.4vw;
+      width: 24%;
+      border-color: blueviolet;
+      cursor: pointer;
+      :hover {
+        box-shadow: 0px 0px 20px 0px darkcyan;
+      }
+    }
     .about-me {
       font-size: 3.4vw;
       margin-top: 110px;
-      font-family: sans-serif;
-      color: dimgrey;
-      line-height: 1.1;
     }
     .career-block {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      div:first-child {
-        padding-right: 25px;
-        :nth-child(even) {
-          padding: 0 25px;
-          border-left: 1.5px solid cyan;
-        }
-        :last-child {
-          padding-left: 25px;
-          border-left: 1.5px solid cyan;
-        }
+      .career-info:after {
+        border-left: 1.5px solid cyan;
       }
+
+      // div:first-child {
+      //   padding-right: 25px;
+      //   :nth-child(even) {
+      //     padding: 0 25px;
+      //     border-left: 1.5px solid cyan;
+      //   }
+      //   :last-child {
+      //     padding-left: 25px;
+      //     border-left: 1.5px solid cyan;
+      //   }
+      // }
+    }
+    .skills {
+      // display: flex;
+      // flex-direction: row;
+      // flex-wrap: wrap;
+      // align-items: center;
+      // justify-content: center;
+      // gap: 2rem;
+      // padding: 2rem;
+      margin-top: -4rem;
+
+      // .skills-list {
+      //   border: 1px solid dimgrey;
+      //   border-radius: 13px;
+      //   padding: 0.5rem;
+      //   background-color: azure;
+      // }
+
+      // img {
+      //   width: 12vw;
+      //   height: 12vw;
+      // }
+      // p {
+      //   color: black;
+      //   font-size: 1rem;
+      //   text-align: center;
+      // }
     }
 
     h4 {
